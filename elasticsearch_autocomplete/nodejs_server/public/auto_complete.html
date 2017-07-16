@@ -1,0 +1,30 @@
+<head>
+  <title>
+    AutoComplete JS
+  </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticsearch/13.2.0/elasticsearch.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticsearch/13.2.0/elasticsearch.jquery.js"></script>
+  <script src="query.js"></script>
+</head>
+
+<body>
+  <div class="form-group" style="padding: 10px">
+    <label for="search">Type for searching:</label>
+    <input type="text" class="form-control" id="search">
+  </div>
+
+  <div id="results">
+
+  </div>
+
+
+</body>
+<script>
+$("#search").on("keyup change", function(){
+  search_areas($(this).val());
+})
+
+</script>
